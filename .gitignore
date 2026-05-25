@@ -1,16 +1,36 @@
-# Compiled class file
+# ==========================================
+# 1. SEGURANÇA E SEGREDOS (CRÍTICO)
+# ==========================================
+# Arquivos onde guardaremos senhas e chaves locais
+.env
+.env.local
+.env.*.local
+*.env
+application-local.properties
+
+# ==========================================
+# 2. FERRAMENTAS DE COMPILAÇÃO (MAVEN / QUARKUS)
+# ==========================================
+# Ignora a pasta onde o Java compila o projeto (evita centenas de megabytes inúteis no git)
+target/
+work/
+.quarkus/
+
+# Arquivos gerados pelo wrapper do Maven
+.mvn/wrapper/maven-wrapper.jar
+
+# Executáveis nativos (GraalVM) que você gerar localmente
+*.exe
+*.dll
+*.so
+*.dylib
+*.native
+
+# ==========================================
+# 3. COMPILADOS E PACKAGES JAVA (O SEU JÁ TINHA)
+# ==========================================
 *.class
-
-# Log file
 *.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
 *.nar
@@ -18,7 +38,32 @@
 *.zip
 *.tar.gz
 *.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# ==========================================
+# 4. EDITOR DE CÓDIGO (VS CODE & INTELLIJ)
+# ==========================================
+# Configurações locais do seu VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+.history/
+
+# Caso decida abrir no IntelliJ algum dia
+.idea/
+*.iml
+*.iws
+
+# ==========================================
+# 5. SISTEMA OPERACIONAL (LIXO DE SISTEMA)
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+acnm-financeiro/src/main/resources/application.properties
+acnm-financeiro/src/main/resources/application.properties
+acnm-financeiro/src/main/resources/application.properties
