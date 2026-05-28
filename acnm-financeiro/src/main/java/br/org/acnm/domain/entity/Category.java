@@ -1,4 +1,4 @@
-package br.org.acnm.model.entity;
+package br.org.acnm.domain.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;

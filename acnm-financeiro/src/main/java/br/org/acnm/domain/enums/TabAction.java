@@ -1,4 +1,4 @@
-package br.org.acnm.model.enums;
+package br.org.acnm.domain.enums;
 
 public enum TabAction {
     ADD,

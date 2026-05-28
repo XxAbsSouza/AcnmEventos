@@ -1,4 +1,4 @@
-package br.org.acnm.model.entity;
+package br.org.acnm.domain.entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.*;
@@ -7,7 +7,7 @@ import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-import br.org.acnm.model.enums.TabAction;
+import br.org.acnm.domain.enums.TabAction;
 
 @Entity
 @Table(name = "tab_transaction")
