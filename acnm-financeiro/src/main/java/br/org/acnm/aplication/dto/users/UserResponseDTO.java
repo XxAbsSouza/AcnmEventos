@@ -1,8 +1,9 @@
 package br.org.acnm.aplication.dto.users;
 
-import br.org.acnm.domain.entity.AppUser;
 import java.time.LocalDateTime;
 import java.util.UUID;
+
+import br.org.acnm.domain.entity.users.AppUser;
 
 public record UserResponseDTO(
     UUID id,
