@@ -1,7 +1,9 @@
 package br.org.acnm.aplication.dto.tab;
 
-import br.org.acnm.domain.entity.TabPayment;
+import br.org.acnm.domain.entity.tab.TabPayment;
 import br.org.acnm.domain.enums.PaymentMethod;
+import br.org.acnm.domain.enums.SyncStatus;
+
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -11,7 +13,7 @@ public record TabPaymentResponseDTO(
     UUID receivedByUserId,
     Integer amount,
     PaymentMethod paymentMethod,
-    String syncStatus,
+    SyncStatus syncStatus,
     LocalDateTime deviceCreatedAt,
     LocalDateTime serverCreatedAt
 ) {

@@ -1,16 +1,17 @@
 package br.org.acnm.aplication.dto.products;
 
-import br.org.acnm.domain.entity.Category;
-import java.util.UUID;
+import br.org.acnm.domain.entity.product.Category;
 
 public record CategoryResponseDTO(
-    UUID id,
-    String name
+    Integer id,
+    String name,
+    String path
 ) {
     public CategoryResponseDTO(Category category) {
         this(
             category.id,
-            category.name
+            category.name,
+            category.path
         );
     }
 }
