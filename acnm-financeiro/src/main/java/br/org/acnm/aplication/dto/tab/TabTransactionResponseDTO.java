@@ -1,19 +1,20 @@
 package br.org.acnm.aplication.dto.tab;
 
-import br.org.acnm.domain.entity.TabTransaction;
+import br.org.acnm.domain.entity.tab.TabTransaction;
+import br.org.acnm.domain.enums.SyncStatus;
 import br.org.acnm.domain.enums.TabAction;
 import java.util.UUID;
 import java.time.LocalDateTime;
 
 public record TabTransactionResponseDTO(
     UUID id,
-    UUID eventProductId,
+    Integer eventProductId,
     Integer quantity,
     Integer unitPrice,
     TabAction action,
     String notes,
     Boolean needsReview, 
-    String syncStatus,
+    SyncStatus syncStatus,
     LocalDateTime deviceCreatedAt,
     LocalDateTime serverCreatedAt
 ) {

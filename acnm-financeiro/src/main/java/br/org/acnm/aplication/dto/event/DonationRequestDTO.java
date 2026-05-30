@@ -2,10 +2,9 @@ package br.org.acnm.aplication.dto.event;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.PositiveOrZero;
-import java.util.UUID;
 
 public record DonationRequestDTO(
-    UUID clientId,
+    Integer clientId,
 
     @NotBlank(message = "O tipo de doação é obrigatório (ex: DINHEIRO, ALIMENTO)")
     String type,

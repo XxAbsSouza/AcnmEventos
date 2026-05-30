@@ -1,16 +1,12 @@
 package br.org.acnm.aplication.dto.event;
 
-import br.org.acnm.domain.entity.Donation;
+import br.org.acnm.domain.entity.event.Donation;
 import br.org.acnm.domain.enums.DonationType;
 
 import java.util.UUID;
 
-import br.org.acnm.domain.entity.Donation;
-import br.org.acnm.domain.enums.DonationType; // Importando o seu Enum
-import java.util.UUID;
-
 public record DonationResponseDTO(
-    UUID id,
+    Integer id,
     UUID clientId,
     DonationType type, 
     Integer amount,

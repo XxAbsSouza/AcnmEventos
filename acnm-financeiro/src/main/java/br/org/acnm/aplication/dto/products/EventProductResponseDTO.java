@@ -1,10 +1,9 @@
 package br.org.acnm.aplication.dto.products;
-import br.org.acnm.domain.entity.EventProduct;
-import java.util.UUID;
+import br.org.acnm.domain.entity.product.EventProduct;
 
 public record EventProductResponseDTO(
-    UUID id,
-    UUID globalProductId,
+    Integer id,
+    Integer globalProductId,
     Integer unitPrice,
     Boolean isActive
 ) {

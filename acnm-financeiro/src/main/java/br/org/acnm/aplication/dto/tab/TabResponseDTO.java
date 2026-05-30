@@ -1,7 +1,8 @@
 package br.org.acnm.aplication.dto.tab;
 
-import br.org.acnm.domain.entity.Card;
-import br.org.acnm.domain.entity.Tab;
+import br.org.acnm.domain.entity.tab.Card;
+import br.org.acnm.domain.entity.tab.Tab;
+import br.org.acnm.domain.enums.SyncStatus;
 import br.org.acnm.domain.enums.TabStatus; 
 import java.time.LocalDateTime;
 import java.util.UUID;
@@ -11,8 +12,8 @@ public record TabResponseDTO(
     Card card,
     Integer tabNumber,
     TabStatus status,
-    UUID clientId,
-    String syncStatus,
+    UUID personId,
+    SyncStatus syncStatus,
     LocalDateTime deviceCreatedAt,
     LocalDateTime serverCreatedAt
 ) {
@@ -22,7 +23,7 @@ public record TabResponseDTO(
             tab.card,
             tab.tabNumber,
             tab.status,
-            tab.client != null ? tab.client.id : null,
+            tab.person != null ? tab.person.id : null,
             tab.syncStatus,
             tab.deviceCreatedAt,
             tab.serverCreatedAt

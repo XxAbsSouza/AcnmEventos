@@ -1,12 +1,11 @@
 package br.org.acnm.aplication.dto.products;
 
-import br.org.acnm.domain.entity.GlobalProduct;
-import java.util.UUID;
+import br.org.acnm.domain.entity.product.GlobalProduct;
 
 public record GlobalProductResponseDTO(
-    UUID id,
+    Integer id,
     String name,
-    UUID categoryId,
+    Integer categoryId,
     String categoryName 
 ) {
     public GlobalProductResponseDTO(GlobalProduct product) {

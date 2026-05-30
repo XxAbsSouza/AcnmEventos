@@ -1,7 +1,8 @@
 package br.org.acnm.aplication.dto.users;
 
-import br.org.acnm.domain.entity.Client;
 import java.util.UUID;
+
+import br.org.acnm.domain.entity.users.Person;
 
 public record ClientResponseDTO(
     UUID id,
@@ -10,7 +11,7 @@ public record ClientResponseDTO(
     String phone,
     UUID appUserId 
 ) {
-    public ClientResponseDTO(Client client) {
+    public ClientResponseDTO(Person client) {
         this(
             client.id,
             client.firstName,

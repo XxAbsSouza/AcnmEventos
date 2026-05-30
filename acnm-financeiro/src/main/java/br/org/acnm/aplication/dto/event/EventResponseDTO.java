@@ -1,10 +1,10 @@
 package br.org.acnm.aplication.dto.event;
-import br.org.acnm.domain.entity.Event;
 import java.time.LocalDateTime;
-import java.util.UUID;
+
+import br.org.acnm.domain.entity.event.Event;
 
 public record EventResponseDTO(
-    UUID id,
+    Integer id,
     String title,
     LocalDateTime startTime,
     LocalDateTime endTime
